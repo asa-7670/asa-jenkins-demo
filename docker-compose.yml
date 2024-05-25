@@ -16,3 +16,5 @@ services:
 volumes:
   jenkins_data:
     driver: local
+  jenkins:
+    driver: local

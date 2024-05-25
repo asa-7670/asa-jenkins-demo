@@ -1,5 +1,5 @@
 version: '2'
-servieces:
+services:
   jenkins:
     image: 'jenkins/jenkins'
     container_name: "jenkins"

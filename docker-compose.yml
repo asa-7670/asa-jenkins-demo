@@ -1,20 +1,14 @@
-version: '2'
+version: '3.9'
 services:
-  jenkins:
+  jenkins-service:
     image: 'jenkins/jenkins'
     container_name: "jenkins"
-    labels:
-      Kompose.service.type: nodeport
     ports:
       - '8080:8080'
       - '443:8443'
       - '50000:50000'
     volumes:
-      - /srv/data/jenkins_data:/jenkins_home
-      - /srv/data/jenkins:/var/jenkins_config
+      - jenkins_home:/jenkins_home
       
 volumes:
-  jenkins_data:
-    driver: local
-  jenkins:
-    driver: local
+  jenkins_home:
